@@ -2,6 +2,10 @@
 
 MCP server for creating Pokémon pastes (pokepastes)
 
+<a href="https://glama.ai/mcp/servers/@jpbullalayao/pokemon-paste-mcp">
+  <img width="380" height="200" src="https://glama.ai/mcp/servers/@jpbullalayao/pokemon-paste-mcp/badge" alt="Pokemon Paste Server MCP server" />
+</a>
+
 ## Installation
 
 ### From npm (Recommended)
