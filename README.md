@@ -4,6 +4,14 @@ An MCP (Model Context Protocol) server that creates Pokepastes from structured P
 
 ## Installation
 
+### From npm (Recommended)
+
+```bash
+npm install -g pokemon-paste-mcp
+```
+
+### From source
+
 ```bash
 npm install
 npm run build
@@ -88,18 +96,47 @@ Creates a Pokepaste from an array of Pokemon set objects.
 - `npm run build`: Build the project
 - `npm start`: Start the server
 
-## Configuration for Claude Desktop
+### MCP Client Configuration
 
-Add this to your Claude Desktop configuration:
+Configure your MCP client (Claude Desktop, Cursor, etc.):
 
+**Using remote npm package:**
 ```json
 {
   "mcpServers": {
     "pokemon-paste": {
-      "command": "node",
-      "args": ["/path/to/pokemon-paste-mcp/build/index.js"],
+      "command": "npx",
+      "args": ["pokemon-paste-mcp"],
       "env": {}
     }
   }
 }
 ```
+
+**Local development:**
+```json
+{
+  "mcpServers": {
+    "pokemon-paste": {
+      "command": "node",
+      "args": ["/path/to/pokemon-paste-mcp/dist/index.js"],
+      "env": {}
+    }
+  }
+}
+```
+
+## Author's Note
+
+Interested in the progress of this project? Feel free to follow the repo for live updates!
+
+If you need to get a hold of me regarding this project, feel free to either:
+
+- email me at professor.ragna@gmail.com
+- tweet me [@professorragna](https://twitter.com/professorragna)
+
+If you're interested in helping to fund this project, you can support me [here](https://www.buymeacoffee.com/professorragna). Any and all support is greatly appreciated!
+
+## License
+
+MIT

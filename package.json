@@ -1,16 +1,16 @@
 {
   "name": "pokemon-paste-mcp",
-  "version": "1.0.0",
-  "description": "MCP server for creating Pokemon pastes using @pkmn/sets and Pokepaste API",
-  "main": "build/index.js",
+  "version": "0.1.0",
+  "description": "MCP server for creating Pokémon pastes (pokepastes)",
+  "main": "dist/index.js",
   "type": "module",
   "bin": {
-    "pokemon-paste-mcp": "./build/index.js"
+    "pokemon-paste-mcp": "./dist/index.js"
   },
   "scripts": {
     "build": "tsc",
     "dev": "tsc --watch",
-    "start": "node build/index.js"
+    "start": "node dist/index.js"
   },
   "dependencies": {
     "@modelcontextprotocol/sdk": "^1.0.0",
@@ -22,7 +22,7 @@
     "@types/node": "^20.0.0",
     "typescript": "^5.0.0"
   },
-  "keywords": ["mcp", "pokemon", "competitive", "pokepaste"],
-  "author": "",
+  "keywords": ["mcp", "pokemon", "competitive", "pokepaste", "model-context-protocol", "vgc", "pokemon-vgc"],
+  "author": "Professor Ragna <professor.ragna@gmail.com>",
   "license": "MIT"
 }
