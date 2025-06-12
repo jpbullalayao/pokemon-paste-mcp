@@ -1,6 +1,6 @@
 # Pokemon Paste MCP Server
 
-An MCP (Model Context Protocol) server that creates Pokepastes from structured Pokemon set data using the `@pkmn/sets` library and the Pokepaste API.
+MCP server for creating Pokémon pastes (pokepastes)
 
 ## Installation
 
