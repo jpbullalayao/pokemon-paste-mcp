@@ -90,11 +90,6 @@ Creates a Pokepaste from an array of Pokemon set objects.
 }
 ```
 
-## Development
-
-- `npm run dev`: Watch mode for development
-- `npm run build`: Build the project
-- `npm start`: Start the server
 
 ### MCP Client Configuration
 
@@ -125,6 +120,77 @@ Configure your MCP client (Claude Desktop, Cursor, etc.):
   }
 }
 ```
+
+## Testing
+
+### Local MCP Tool Testing
+
+You can test the local MCP server using the MCP Inspector:
+
+```bash
+npm run build
+npx @modelcontextprotocol/inspector node path/to/pokemon-paste-mcp/dist/index.js
+```
+
+If you want to test the MCP server directly with your MCP client, use this complete test input:
+
+```json
+{
+  "pokemon": [
+    {
+      "name": "Pikachu",
+      "species": "Pikachu",
+      "item": "Light Ball",
+      "ability": "Static",
+      "moves": ["Thunderbolt", "Quick Attack", "Iron Tail", "Agility"],
+      "nature": "Jolly",
+      "gender": "M",
+      "evs": { "hp": 0, "atk": 252, "def": 0, "spa": 4, "spd": 0, "spe": 252 },
+      "ivs": { "hp": 31, "atk": 31, "def": 31, "spa": 31, "spd": 31, "spe": 31 },
+      "level": 50,
+      "shiny": false
+    },
+    {
+      "name": "Charizard",
+      "species": "Charizard",
+      "item": "Charcoal",
+      "ability": "Blaze",
+      "moves": ["Flamethrower", "Air Slash", "Solar Beam", "Roost"],
+      "nature": "Modest",
+      "gender": "M",
+      "evs": { "hp": 4, "atk": 0, "def": 0, "spa": 252, "spd": 0, "spe": 252 },
+      "ivs": { "hp": 31, "atk": 0, "def": 31, "spa": 31, "spd": 31, "spe": 31 },
+      "level": 50,
+      "teraType": "Fire"
+    },
+    {
+      "name": "Alakazam",
+      "species": "Alakazam",
+      "item": "Life Orb",
+      "ability": "Magic Guard",
+      "moves": ["Psychic", "Focus Blast", "Shadow Ball", "Recover"],
+      "nature": "Timid",
+      "gender": "M",
+      "evs": { "hp": 4, "atk": 0, "def": 0, "spa": 252, "spd": 0, "spe": 252 },
+      "ivs": { "hp": 31, "atk": 0, "def": 31, "spa": 31, "spd": 31, "spe": 31 },
+      "level": 50,
+      "shiny": true,
+      "pokeball": "Ultra Ball"
+    }
+  ],
+  "title": "Sample Competitive Team",
+  "author": "Pokemon Trainer",
+  "notes": "A balanced team with Pikachu as the main attacker, Charizard for coverage, and Alakazam for special sweeping."
+}
+```
+
+This test input includes:
+- Three diverse Pokemon with different roles
+- Various optional fields (shiny, teraType, pokeball)
+- Sample EV/IV spreads for competitive play
+- Team metadata (title, author, notes)
+
+The expected output should be a Pokepaste URL that you can visit to see the formatted team.
 
 ## Author's Note
 
